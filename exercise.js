@@ -32,7 +32,7 @@ router.post('/add', async function (req, res) {
             _id: exercise.userId,
             description: exercise.description,
             duration: exercise.duration,
-            date: exercise.date
+            date: exercise.date.toDateString()
         });
     } catch (err) {
         res.status(500).json({
