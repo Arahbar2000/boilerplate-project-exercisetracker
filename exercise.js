@@ -29,7 +29,7 @@ router.post('/add', async function (req, res) {
         let exercise = await new Exercise({ userId, description, duration, date}).save();
         res.json({
             username: user.username,
-            userId: exercise.userId,
+            _id: exercise.userId,
             description: exercise.description,
             duration: exercise.duration,
             date: exercise.date
